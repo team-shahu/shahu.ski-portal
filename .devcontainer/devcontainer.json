@@ -1,0 +1,15 @@
+{
+	"name": "shahu.ski-portal",
+	"dockerComposeFile": "compose.yaml",
+	"service": "main",
+	"workspaceFolder": "/workspace/app",
+	"postCreateCommand": "sudo chown -R node:node ./node_modules && npm install",
+	"remoteUser": "node",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"bradlc.vscode-tailwindcss"
+			]
+		}
+	}
+}
