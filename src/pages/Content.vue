@@ -12,7 +12,7 @@
     onMounted(() => {
         // データの取得
         client.get({
-        endpoint: 'blogs',
+        endpoint: 'contents',
         contentId: content_id,
       })
       .then((res) => {

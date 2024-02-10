@@ -1,22 +1,55 @@
 <script setup lang="ts">
-    import { ref, onMounted } from 'vue';
+    import { ref, onMounted, defineProps } from 'vue';
     import { client } from '../main.js';
+
+    // props
+    let props = defineProps({
+        page: Number,
+        category_id: String,
+    });
+
+    // limit, offsetの設定
+    let limit: number = 50;
+    let offset: number = (props.page ?? 1 - 1) * limit;
+
+    // queries錬成
+    let queries: any;
+    if(props.category_id === undefined){
+        // category指定がない
+        queries = {
+            limit: limit,
+            offset: offset,
+            orders: '-createdAt',
+        };
+    }else{
+        // category指定がある
+        queries = {
+            limit: limit,
+            offset: offset,
+            orders: '-createdAt',
+            filters: 'category[contains]'+props.category_id,
+        };
+    }
+
+    console.log(queries);
+
 
     let contents: any = ref([]);
 
     // mounted
     onMounted(() => {
         client.get({
-        endpoint: 'blogs',
-    })
-    .then((res) => {
-        // 順次contentsへpush
-        res.contents.forEach((content: any) => {
-            contents.value.push(content);
-        });
-        console.log(contents);
-    })
-    .catch((err) => console.log(err));
+            endpoint: 'contents',
+            queries: queries
+        })
+        .then((res) => {
+            // 順次contentsへpush
+            res.contents.forEach((content: any) => {
+                contents.value.push(content);
+            });
+            console.log(contents);
+        })
+        .catch((err) => console.log(err));
     });
 
 </script>
