@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Index from "../pages/Index.vue";
 import MoreInfo from "../pages/MoreInfo.vue";
+import Donate from "../pages/Donate.vue";
 import Content from "../pages/Content.vue";
 import Category from "../pages/Category.vue";
 
@@ -14,6 +15,11 @@ export const routes = [
     path: "/more-info",
     name: "MoreInfo",
     component: MoreInfo,
+  },
+  {
+    path: "/donate",
+    name: "Donate",
+    component: Donate,
   },
   {
     path: "/content/doc/:content_id",
