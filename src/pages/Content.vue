@@ -1,0 +1,42 @@
+<script setup lang="ts">
+    import { ref, onMounted } from 'vue';
+    import { client } from '../main.js';
+    import { useRoute } from "vue-router";
+    const route = useRoute();
+
+    // propsからidを取得
+    let content_id: string = route.params?.content_id as string;
+    console.log(content_id);
+    let content: any = ref([]);
+
+    onMounted(() => {
+        // データの取得
+        client.get({
+        endpoint: 'blogs',
+        contentId: content_id,
+      })
+      .then((res) => {
+        content.value = res;
+        console.log(content);
+      });
+    });
+</script>
+
+<template>
+  <div class="container mx-auto px-4">
+    <div class="mb-5 dark:border-gray-700">
+      <span class="mb-2 text-sm font-semibold text-blue-600 pr-3" v-for="category in content.category" :key="category.id">{{ category.name }}</span>
+      <p class="mt-2 text-lg text-gray-800 dark:text-gray-400">投稿者:&nbsp;<span class="pr-3" v-for="auther in content.auther" :key="auther.id">{{ auther.name }}</span></p>
+      <h1 class="block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">{{ content.title }}</h1>
+    </div>
+
+    <div class="dark:text-white" v-html="content.content"></div>
+  </div>
+</template>
+
+<style scoped>
+  img {
+    width: 50vw;
+    height: auto;
+  }
+</style>

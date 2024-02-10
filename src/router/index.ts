@@ -1,11 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Index from "../pages/Index.vue";  // 追記
+import Index from "../pages/Index.vue";
+import Content from "../pages/Content.vue";
 
-const routes = [
+export const routes = [
   {
     path: "/",
     name: "Index",
     component: Index,
+  },
+  {
+    path: "/content/doc/:content_id",
+    name: "Content",
+    component: Content,
+    props: true,
   },
 ];
 
