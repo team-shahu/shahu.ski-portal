@@ -13,8 +13,8 @@
             FANBOXからご支援いただいた場合は、お礼としてご支援内容に応じた制限の緩和等をいたしております。
         </p>
         <p class="mt-5">
-            <a class="inline-flex items-center gap-x-1 font-medium text-blue-600 dark:text-blue-500" href="#">
-            Contact sales to learn more
+            <a class="inline-flex items-center gap-x-1 font-medium text-blue-600 dark:text-blue-500" href="https://shahu.ski/@mai_llj">
+            寄付についての詳細の相談は@mai_llj@shahu.skiへ
             <svg class="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </a>
         </p>
