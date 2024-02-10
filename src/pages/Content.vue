@@ -6,7 +6,6 @@
 
     // propsからidを取得
     let content_id: string = route.params?.content_id as string;
-    console.log(content_id);
     let content: any = ref([]);
 
     onMounted(() => {
@@ -31,7 +30,14 @@
         </a>
     </div>
     <div class="mb-5 dark:border-gray-700">
-      <span class="mb-1 text-sm font-semibold text-blue-600 pr-3" v-for="category in content.category" :key="category.id">{{ category.name }}</span>
+      <span v-for="category in content.category" :key="category.id">
+          <router-link :to="'/category/'+category.id" class="mr=1">
+              <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">
+                  <span class="w-1.5 h-1.5 inline-block rounded-full bg-blue-800 dark:bg-blue-500"></span>
+                  {{ category.name }}
+              </span>
+          </router-link>
+      </span>
       <p class="mt-2 text-lg text-gray-800 dark:text-gray-400">投稿者:&nbsp;<span class="pr-3" v-for="auther in content.auther" :key="auther.id">{{ auther.name }}</span></p>
       <h1 class="block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">{{ content.title }}</h1>
     </div>

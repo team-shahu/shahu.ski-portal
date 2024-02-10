@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Index from "../pages/Index.vue";
 import Content from "../pages/Content.vue";
+import Category from "../pages/Category.vue";
 
 export const routes = [
   {
@@ -12,6 +13,12 @@ export const routes = [
     path: "/content/doc/:content_id",
     name: "Content",
     component: Content,
+    props: true,
+  },
+  {
+    path: "/category/:category_id",
+    name: "Category",
+    component: Category,
     props: true,
   },
 ];

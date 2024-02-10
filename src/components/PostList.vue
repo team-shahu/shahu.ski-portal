@@ -31,9 +31,6 @@
         };
     }
 
-    console.log(queries);
-
-
     let contents: any = ref([]);
 
     // mounted
@@ -61,10 +58,12 @@
                     <img class="w-full h-auto rounded-t-xl" src="https://images.unsplash.com/photo-1680868543815-b8666dba60f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80" alt="Image Description">
                     <div class="p-4 md:p-5">
                         <span v-for="category in content.category" :key="category.id">
-                            <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">
-                                <span class="w-1.5 h-1.5 inline-block rounded-full bg-blue-800 dark:bg-blue-500"></span>
-                                {{ category.name }}
-                            </span>&nbsp;
+                            <router-link :to="'/category/'+category.id" class="mr=1">
+                                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">
+                                    <span class="w-1.5 h-1.5 inline-block rounded-full bg-blue-800 dark:bg-blue-500"></span>
+                                    {{ category.name }}
+                                </span>
+                            </router-link>
                         </span>
                         <h3 class="mt-2 text-lg font-bold text-gray-800 dark:text-white">
                         {{ content.title }}
