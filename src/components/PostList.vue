@@ -74,7 +74,7 @@
                 <router-link :to="'/content/doc/'+content.id">
                     <div class="flex flex-col bg-white border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]">
                         <img v-if="content.eyecatch!==undefined" class="w-full h-auto rounded-t-xl" :src="content.eyecatch.url" :alt="content.title">
-                        <img v-if="content.eyecatch===undefined" class="w-full h-auto rounded-t-xl" src="https://www.shoshinsha-design.com/wp-content/uploads/2020/05/%E3%83%8E%E3%83%BC%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B7%E3%82%99-760x460.png" :alt="content.title">
+                        <img v-if="content.eyecatch===undefined" class="w-full h-auto rounded-t-xl" src="/noimage.png" :alt="content.title">
                         <div class="p-4 md:p-5">
                             <span v-for="category in content.category" :key="category.id">
                                 <router-link :to="'/category/'+category.id" class="mr=1">
