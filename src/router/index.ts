@@ -3,6 +3,7 @@ import Index from "../pages/Index.vue";
 import MoreInfo from "../pages/MoreInfo.vue";
 import Donate from "../pages/Donate.vue";
 import Faq from "../pages/FAQ.vue";
+import Search from "../pages/Search.vue";
 import Content from "../pages/Content.vue";
 import Category from "../pages/Category.vue";
 
@@ -26,6 +27,11 @@ export const routes = [
     path: "/faq",
     name: "FaQ",
     component: Faq,
+  },
+  {
+    path: "/search",
+    name: "Search",
+    component: Search,
   },
   {
     path: "/content/doc/:content_id",
