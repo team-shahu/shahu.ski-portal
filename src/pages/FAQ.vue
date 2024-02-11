@@ -49,7 +49,7 @@
                 <div class="space-y-3">
                     <h2 class="text-1xl font-bold md:text-2xl dark:text-white">{{ content.question }}</h2>
 
-                    <p class="text-lg ml-5 text-gray-800 dark:text-gray-200" v-html="content.answer"></p>
+                    <div class="micro-cms" v-html="content.answer"></div>
                 </div>
 
                 <div class="mt-2 mb-3 ml-5 bg-blue-50 border border-blue-500 text-sm text-gray-500 rounded-lg p-5 dark:bg-blue-600/[.15]" v-if="content.description">

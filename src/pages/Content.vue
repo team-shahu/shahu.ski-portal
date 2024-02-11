@@ -55,14 +55,7 @@
         <h1 class="mt-2 block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">{{ content.title }}</h1>
       </div>
 
-      <div class="dark:text-white" v-html="content.content"></div>
+      <div class="micro-cms" v-html="content.content"></div>
     </div>
   </div>
 </template>
-
-<style scoped>
-  img {
-    width: 50vw;
-    height: auto;
-  }
-</style>
