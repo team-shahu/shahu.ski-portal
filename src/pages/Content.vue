@@ -52,8 +52,7 @@
                 </span>
             </router-link>
         </span>
-        <p class="mt-2 text-lg text-gray-800 dark:text-gray-400">投稿者:&nbsp;<span class="pr-3" v-for="auther in content.auther" :key="auther.id">{{ auther.name }}</span></p>
-        <h1 class="block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">{{ content.title }}</h1>
+        <h1 class="mt-2 block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">{{ content.title }}</h1>
       </div>
 
       <div class="dark:text-white" v-html="content.content"></div>
