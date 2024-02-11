@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Index from "../pages/Index.vue";
 import MoreInfo from "../pages/MoreInfo.vue";
 import Donate from "../pages/Donate.vue";
+import Faq from "../pages/FAQ.vue";
 import Content from "../pages/Content.vue";
 import Category from "../pages/Category.vue";
 
@@ -20,6 +21,11 @@ export const routes = [
     path: "/donate",
     name: "Donate",
     component: Donate,
+  },
+  {
+    path: "/faq",
+    name: "FaQ",
+    component: Faq,
   },
   {
     path: "/content/doc/:content_id",
