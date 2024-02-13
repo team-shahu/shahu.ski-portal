@@ -58,7 +58,7 @@ const router = createRouter({
   routes,
 });
 
-router.afterEach((to, from) => {
+router.afterEach((to) => {
   document.title = (to.meta.title as string) || DEFAULT_TITLE
 })
 
