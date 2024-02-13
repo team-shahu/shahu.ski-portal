@@ -1,0 +1,11 @@
+volumes:
+  node_modules:
+
+services:
+  main:
+    image: mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye
+    volumes:
+      - ..:/workspace/app
+      - node_modules:/workspace/app/node_modules
+    tty: true
+    stdin_open: true
