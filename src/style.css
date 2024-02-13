@@ -11,7 +11,11 @@
     @apply w-full border-collapse border-2 border-gray-200 dark:border-gray-700;
 }
 .micro-cms img {
-    @apply dark:text-white  max-w-[50rem] min-w-[30vw] mx-auto bg-white py-10 px-4 sm:px-6 lg:px-8 dark:bg-gray-800;
+    @apply dark:text-white  max-w-[50rem] min-w-[30vw] bg-white dark:bg-gray-800 pl-0 pr-0 ml-0 mr-0;
+}
+/* 画像を左寄せ */
+.micro-cms figure {
+    @apply text-left;
 }
 .micro-cms h1 {
     @apply mt-5 block text-2xl;

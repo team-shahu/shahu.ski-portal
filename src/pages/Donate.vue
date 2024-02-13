@@ -1,20 +1,20 @@
 <template>
     <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-    <!-- 寄付ヘッダ -->
+    <!-- 支援ヘッダ -->
     <div class="grid md:grid-cols-2 gap-12">
         <div class="lg:w-3/4">
         <h2 class="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-white">
             しゃふすきーをご支援くださる優しい方へ向けたページ。
         </h2>
         <p class="mt-3 text-gray-800 dark:text-gray-400">
-            現在、しゃふすきーでは、FANBOX/Kyashによるご寄付を受け付けております。<br>
-            こちらでご寄付頂いた収入はサーバーの運営費に充てさせて頂きます。<br>
+            現在、しゃふすきーでは、FANBOX/Kyashによるご支援を受け付けております。<br>
+            こちらでご支援頂いた収入はサーバーの運営費に充てさせて頂きます。<br>
             <br>
             FANBOXからご支援いただいた場合は、お礼としてご支援内容に応じた制限の緩和等をいたしております。
         </p>
         <p class="mt-5">
-            <a class="inline-flex items-center gap-x-1 font-medium text-blue-600 dark:text-blue-500" href="https://shahu.ski/@mai_llj">
-            寄付についての詳細の相談は@mai_llj@shahu.skiへ
+            <a class="inline-flex items-center gap-x-1 font-medium text-blue-600 dark:text-blue-500" href="https://forms.gle/kmie8ZmAgiDCgLUi9" target="_blank">
+            支援についてのお問い合わせはこちら
             <svg class="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
             </a>
         </p>
@@ -31,7 +31,7 @@
             <h3 class="text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200">Pixiv Fanbox</h3>
             <p class="mt-1 text-gray-600 dark:text-gray-400">
                 しゃふすきーのFANBOXページです。こちらからご支援いただけます。
-                <a class="inline-flex items-center gap-x-1 font-medium text-blue-600 dark:text-blue-500" href="#">寄付ページはこちら
+                <a class="inline-flex items-center gap-x-1 font-medium text-blue-600 dark:text-blue-500" href="https://chan-mai.fanbox.cc" target="_blank">支援ページはこちら
                 <svg class="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                 </a>
             </p>
@@ -50,7 +50,7 @@
                 Kyash
             </h3>
             <p class="mt-1 text-gray-600 dark:text-gray-400">
-                Kyashによる寄付は、以下のIDへ送金していただくことで可能です。&nbsp;&nbsp;&nbsp;(※特典内容は下記の記載に準拠し、端数は切り捨てて計算されます)<br>
+                Kyashによる支援は、以下のIDへ送金していただくことで可能です。&nbsp;&nbsp;&nbsp;(※特典内容は下記の記載に準拠し、端数は切り捨てて計算されます)<br>
                 Kyash ID:&nbsp;<span class="font-semibold">chanmaillj</span>
             </p>
             </div>
@@ -64,7 +64,7 @@
     </div>
     <!-- End Icon Blocks -->
 
-    <!-- 寄付詳細 -->
+    <!-- 支援詳細 -->
     <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:items-center">
             <!-- Card -->
@@ -86,7 +86,7 @@
                 <li class="flex space-x-2">
                 <svg class="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 <span class="text-gray-800 dark:text-gray-400">
-                    寄付バッジ付与
+                    支援バッジ付与
                 </span>
                 </li>
 
@@ -105,7 +105,7 @@
                 <span class="font-bold text-2xl -me-2">￥</span>
                 3,000 -
             </span>
-            <p class="mt-2 text-sm text-gray-500">それなりに潤ったお財布事情があり、それなりに寄付したい方</p>
+            <p class="mt-2 text-sm text-gray-500">それなりに潤ったお財布事情があり、それなりに支援したい方</p>
 
             <ul class="mt-7 space-y-2.5 text-sm">
                 <li class="flex space-x-2">
@@ -152,14 +152,14 @@
                 <li class="flex space-x-2">
                 <svg class="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 <span class="text-gray-800 dark:text-gray-400">
-                    あとで考える
+                    -
                 </span>
                 </li>
 
                 <li class="flex space-x-2">
                 <svg class="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 <span class="text-gray-800 dark:text-gray-400">
-                    あとで考える
+                    -
                 </span>
                 </li>
             </ul>
@@ -173,7 +173,7 @@
                 <span class="font-bold text-2xl -me-2">￥</span>
                 10,000 -
             </span>
-            <p class="mt-2 text-sm text-gray-500">有り余ってるお金をしゃふすきーに寄付したい気の狂った大富豪の方</p>
+            <p class="mt-2 text-sm text-gray-500">有り余ってるお金でしゃふすきーを支援したい気の狂った大富豪の方</p>
 
             <ul class="mt-7 space-y-2.5 text-sm">
                 <li class="flex space-x-2">
@@ -186,19 +186,41 @@
                 <li class="flex space-x-2">
                 <svg class="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 <span class="text-gray-800 dark:text-gray-400">
-                    あとで考える
+                    -
                 </span>
                 </li>
 
                 <li class="flex space-x-2">
                 <svg class="flex-shrink-0 mt-0.5 h-4 w-4 text-blue-600 dark:text-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 <span class="text-gray-800 dark:text-gray-400">
-                    あとで考える
+                    -
                 </span>
                 </li>
             </ul>
             </div>
             <!-- End Card -->
+        </div>
+    </div>
+
+    
+    <!-- 注意事項 -->
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="mt-2 mb-3 bg-blue-50 border border-blue-500 text-sm text-gray-500 rounded-lg p-5 dark:bg-blue-600/[.15]">
+            <div class="flex">
+                <svg class="flex-shrink-0 h-4 w-4 text-blue-600 mt-0.5 dark:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4"></path>
+                <path d="M12 8h.01"></path>
+                </svg>
+                <div class="ms-3">
+                <h3 class="text-blue-600 font-semibold dark:font-medium dark:text-white">
+                    Information
+                </h3>
+                <p class="mt-2 text-gray-800 dark:text-slate-400">
+                    特典の付与は自動では行われておりません！ご希望の方は支援されたことがわかる情報とともに<a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="https://forms.gle/kmie8ZmAgiDCgLUi9" target="_blank">お問い合わせページ</a>または、<a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="https://shahu.ski/@mai_llj" target="_blank">@mai_llj@shahu.ski</a>までお問い合わせください。
+                </p>
+                </div>
+            </div>
         </div>
     </div>
 </template>
