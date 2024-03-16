@@ -7,6 +7,8 @@ import Search from "../pages/Search.vue";
 import Content from "../pages/Content.vue";
 import Category from "../pages/Category.vue";
 
+import NotFound from "../pages/NotFound.vue";
+
 const DEFAULT_TITLE = 'しゃふすきーポータル'
 
 export const routes = [
@@ -50,6 +52,12 @@ export const routes = [
     name: "Category",
     component: Category,
     props: true,
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
+    meta: { title: DEFAULT_TITLE+' | 404' }
   },
 ];
 

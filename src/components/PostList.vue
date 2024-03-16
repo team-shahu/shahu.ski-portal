@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import { ref, onMounted, defineProps } from 'vue';
     import { client } from '../main.js';
+    import moment from 'moment';
 
     // props
     let props = defineProps({
@@ -45,15 +46,50 @@
         .then((res) => {
             // 順次contentsへpush
             res.contents.forEach((content: any) => {
+                console.log(content);
+                console.log(content["eyecatch"]);
+                // content["eyecatch"]["url"]があるか
+                if(!content["eyecatch"]){
+                    // ["eyecatch"]["url"]を追加
+                    content["eyecatch"] = {
+                        url: ogImageUrlGenerate(content.title)
+                    };
+                }
                 contents.value.push(content);
             });
             // totalCountからmaxPageを算出
             maxPage.value = Math.ceil(res.totalCount / limit);
             isLoaded.value = true;
-            console.log(res);
         })
         .catch((err) => console.log(err));
     });
+
+    function base64urlEncode(source: string){
+        const textEncoder = new TextEncoder();
+        const encodeString = (string: string | undefined) => textEncoder.encode(string);
+
+        const decodeBinaryString = (uint8Array: any) => uint8Array.reduce(
+            (binaryString: string, uint8: number) => binaryString + String.fromCharCode(uint8),
+            '',
+        );
+        const uint8Array = encodeString(source);
+        const binaryString = decodeBinaryString(uint8Array);
+        const base64 = btoa(binaryString);
+
+        return base64.replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
+    }
+
+    function ogImageUrlGenerate(title: string){
+        const baseImageURL: string = 'https://images.microcms-assets.io/assets/08218e9018194c48a74b726b50d18abf/9b24459a33d74a58b2e132d3ee34b9e6/portal%20OG%E7%B4%A0%E6%9D%90.png/?blend-mode=normal&w=1200&mark-align=center%2Cmiddle&blend64=';
+        let titleImageURL: string = 'https://images.microcms-assets.io/~text?txtsize=48&txt-x=43&txt-y=100&w=1100&h=590&txt-color=FFABBF&txt-align=left,middle&txtfont=Hiragino%20Sans%20W6&txt64='+base64urlEncode(title);
+
+        const url = baseImageURL + base64urlEncode(titleImageURL);
+        return url;
+    }
+
+    function timeFormat(date: string | undefined) {
+        return moment(date).format('YYYY/MM/DD HH:mm');
+    }
 
 </script>
 <template>
@@ -88,7 +124,7 @@
                             {{ content.title }}
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-gray-400">
-                            {{ content.createdAt }}
+                            {{ timeFormat(content.createdAt) }}
                             </p>
                         </div>
                     </div>
@@ -128,4 +164,4 @@
     <div v-if="maxPage==0" class="mb-10">
         <p class="text-center text-gray-500 dark:text-gray-400">一致する投稿が見つかりませんでした。</p>
     </div>
-</template>
+</template>(: string | undefined)(: any[] | Uint8Array)
