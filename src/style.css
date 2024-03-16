@@ -11,8 +11,24 @@
     @apply w-full border-collapse border-2 border-gray-200 dark:border-gray-700;
 }
 .micro-cms img {
-    @apply dark:text-white  max-w-[50rem] min-w-[30vw] bg-white dark:bg-gray-800 pl-0 pr-0 ml-0 mr-0;
+    
 }
+.micro-cms img {
+    @apply dark:text-white w-full min-w-[30vw] bg-white dark:bg-gray-800 pl-0 pr-0 ml-0 mr-0;
+}
+/* タブレット */
+@media (min-width: 640px) {
+    .micro-cms img {
+        @apply max-w-[50vw];
+    }
+}
+/* PC */
+@media (min-width: 1024px) {
+    .micro-cms img {
+        @apply max-w-[50vw];
+    }
+}
+
 /* 画像を左寄せ */
 .micro-cms figure {
     @apply text-left;
