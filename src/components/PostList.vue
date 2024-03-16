@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import { ref, onMounted, defineProps } from 'vue';
     import { client } from '../main.js';
+    import moment from 'moment';
 
     // props
     let props = defineProps({
@@ -86,6 +87,10 @@
         return url;
     }
 
+    function timeFormat(date: string | undefined) {
+        return moment(date).format('YYYY/MM/DD HH:mm');
+    }
+
 </script>
 <template>
     <!-- Loading -->
@@ -119,7 +124,7 @@
                             {{ content.title }}
                             </h3>
                             <p class="mt-1 text-gray-500 dark:text-gray-400">
-                            {{ content.createdAt }}
+                            {{ timeFormat(content.createdAt) }}
                             </p>
                         </div>
                     </div>
