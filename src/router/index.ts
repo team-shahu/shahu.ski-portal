@@ -3,6 +3,7 @@ import Index from "../pages/Index.vue";
 import MoreInfo from "../pages/MoreInfo.vue";
 import Donate from "../pages/Donate.vue";
 import Faq from "../pages/FAQ.vue";
+import Contact from "../pages/Contact.vue";
 import Search from "../pages/Search.vue";
 import Content from "../pages/Content.vue";
 import Category from "../pages/Category.vue";
@@ -28,6 +29,12 @@ export const routes = [
     name: "Donate",
     component: Donate,
     meta: { title: DEFAULT_TITLE+' | 支援' }
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
+    meta: { title: DEFAULT_TITLE+' | お問い合わせ' }
   },
   {
     path: "/faq",
