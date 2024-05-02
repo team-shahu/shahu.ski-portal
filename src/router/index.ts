@@ -3,6 +3,7 @@ import Index from "../pages/Index.vue";
 import MoreInfo from "../pages/MoreInfo.vue";
 import Donate from "../pages/Donate.vue";
 import Faq from "../pages/FAQ.vue";
+import Contact from "../pages/Contact.vue";
 import Search from "../pages/Search.vue";
 import Content from "../pages/Content.vue";
 import Category from "../pages/Category.vue";
@@ -27,7 +28,13 @@ export const routes = [
     path: "/donate",
     name: "Donate",
     component: Donate,
-    meta: { title: DEFAULT_TITLE+' | 寄付' }
+    meta: { title: DEFAULT_TITLE+' | 支援' }
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    component: Contact,
+    meta: { title: DEFAULT_TITLE+' | お問い合わせ' }
   },
   {
     path: "/faq",
@@ -53,6 +60,35 @@ export const routes = [
     component: Category,
     props: true,
   },
+  // 利用規約
+  {
+    path: "/terms",
+    name: "Terms",
+    redirect: "/content/doc/5qs4tuy9kh-p",
+    meta: { title: DEFAULT_TITLE+' | 利用規約' }
+  },
+  // プライバシーポリシー
+  {
+    path: "/privacy-policy",
+    name: "Privacy Policy",
+    redirect: "/content/doc/tmynent2by4",
+    meta: { title: DEFAULT_TITLE+' | プライバシーポリシー' }
+  },
+  // 公式discord
+  {
+    path: "/discord",
+    name: "Discord",
+    redirect: "https://discord.gg/pH2CYJQW7v",
+    meta: { title: DEFAULT_TITLE+' | 公式discord' }
+  },
+  // ブランディング・ガイドライン
+  {
+    path: "/assets",
+    name: "Assets",
+    redirect: "/content/doc/9fh_9uyaw9j",
+    meta: { title: DEFAULT_TITLE+' | ブランディング・ガイドライン' }
+  },
+  // 404
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
@@ -66,7 +102,7 @@ const router = createRouter({
   routes,
 });
 
-router.afterEach((to) => {
+router.afterEach((to: any) => {
   document.title = (to.meta.title as string) || DEFAULT_TITLE
 })
 

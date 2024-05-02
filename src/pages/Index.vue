@@ -27,7 +27,7 @@
             <!-- Announcement Banner -->
             <div class="flex justify-center">
             <router-link to="/donate" class="inline-flex items-center gap-x-2 bg-white border border-gray-200 text-sm text-gray-800 p-1 ps-3 rounded-full transition hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
-                寄付のご案内
+                支援のご案内
                 <span class="py-1.5 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-full bg-gray-200 font-semibold text-sm text-gray-600 dark:bg-gray-700 dark:text-gray-400">
                 <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
                 </span>
@@ -39,7 +39,7 @@
             <div class="mt-5 max-w-2xl text-center mx-auto">
             <h1 class="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
                 ようこそ
-                <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent">しゃふすきー</span>
+                <span class="bg-clip-text bg-gradient-to-tl from-rose-500 to-purple-400 text-transparent">しゃふすきー</span>
                 へ
             </h1>
             </div>
@@ -51,13 +51,13 @@
 
             <!-- Buttons -->
             <div class="mt-8 gap-3 flex justify-center">
-            <router-link class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-blue-600 to-violet-600 hover:from-violet-600 hover:to-blue-600 border border-transparent text-white text-sm font-medium rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800" to="/content/doc/5qs4tuy9kh-p">
+            <router-link class="inline-flex justify-center items-center gap-x-3 text-center bg-gradient-to-tl from-rose-500 to-purple-400 text-white text-sm font-medium rounded-md focus:outline-none focus:ring-1 focus:ring-gray-600 py-3 px-4 dark:focus:ring-offset-gray-800" to="/terms">
                 利用規約
                 <svg class="flex-shrink-0 w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             </router-link>
-            <router-link class="inline-flex justify-center items-center gap-x-3 text-center bg-white border border-gray-200 text-gray-800 hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 py-3 px-4 rounded-md font-medium text-sm" to="/content/doc/tmynent2by4">
+            <router-link class="inline-flex justify-center items-center gap-x-3 text-center bg-white border border-gray-200 text-gray-800 hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-gray-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 py-3 px-4 rounded-md font-medium text-sm" to="/privacy-policy">
                 プライバシーポリシー
                 <svg class="flex-shrink-0 w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -71,12 +71,12 @@
             <svg class="h-5 w-5 text-gray-300 dark:text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M6 13L10 3" stroke="currentColor" stroke-linecap="round"/>
             </svg>
-            <a class="inline-flex items-center gap-x-1.5 text-sm text-blue-600 decoration-2 hover:underline font-medium" href="https://discord.gg/pH2CYJQW7v">
+            <router-link class="inline-flex items-center gap-x-1.5 text-sm text-rose-400 decoration-2 hover:underline font-medium" to="/discord">
                 Discordへ参加する
                 <svg class="flex-shrink-0 w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-            </a>
+            </router-link>
             </div>
         </div>
     </div>
@@ -108,10 +108,10 @@
                     <div class="relative z-10 flex space-x-3 p-3 bg-white border rounded-lg shadow-lg shadow-gray-100 dark:bg-slate-900 dark:border-gray-700 dark:shadow-gray-900/[.2]">
                         <div class="flex-[1_0_0%]">
                         <label for="q" class="block text-sm text-gray-700 font-medium dark:text-white"><span class="sr-only">検索する</span></label>
-                        <input v-model="search_input" type="search" name="q" id="q" class="focus:outline-none py-2.5 px-4 block w-full border-transparent rounded-lg focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600" placeholder="検索する">
+                        <input v-model="search_input" type="search" name="q" id="q" class="focus:outline-none py-2.5 px-4 block w-full border-transparent rounded-lg focus:border-rose-500 focus:ring-rose-500 dark:bg-slate-900 dark:border-transparent dark:text-gray-400 dark:focus:ring-gray-600" placeholder="検索する">
                         </div>
                         <div class="flex-[0_0_auto]">
-                        <router-link class="w-[46px] h-[46px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" :to="'/search?q='+search_input">
+                        <router-link class="w-[46px] h-[46px] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-rose-600 text-white hover:bg-rose-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" :to="'/search?q='+search_input">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                             </svg>

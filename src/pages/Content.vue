@@ -26,7 +26,7 @@
 <template>
   <div class="container mx-auto px-4">
     <div class="mt-3 xl:hidden">
-        <a class="inline-flex items-center gap-x-1 mb-5 text-sm text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:hover:text-blue-500" href="#" onclick="window.history.back();">
+        <a class="inline-flex items-center gap-x-1 mb-5 text-sm text-gray-800 hover:text-rose-400 dark:text-gray-200 dark:hover:text-rose-500" href="#" onclick="window.history.back();">
           <svg class="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
           前のページへ戻る
         </a>
@@ -35,7 +35,7 @@
     <div v-if="!isLoaded" class="min-h-[15rem] flex flex-col">
         <div class="flex flex-auto flex-col justify-center items-center p-4 md:p-5">
             <div class="flex justify-center">
-            <div class="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500" role="status" aria-label="loading">
+            <div class="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-rose-400 rounded-full dark:text-rose-500" role="status" aria-label="loading">
                 <span class="sr-only">Loading...</span>
             </div>
             </div>
@@ -46,8 +46,8 @@
       <div class="mb-5 dark:border-gray-700">
         <span v-for="category in content.category" :key="category.id">
             <router-link :to="'/category/'+category.id" class="mr=1">
-                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-800/30 dark:text-blue-500">
-                    <span class="w-1.5 h-1.5 inline-block rounded-full bg-blue-800 dark:bg-blue-500"></span>
+                <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-rose-100 text-rose-800 dark:bg-rose-800/30 dark:text-rose-500">
+                    <span class="w-1.5 h-1.5 inline-block rounded-full bg-rose-800 dark:bg-rose-500"></span>
                     {{ category.name }}
                 </span>
             </router-link>
