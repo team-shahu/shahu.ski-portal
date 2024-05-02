@@ -34,13 +34,13 @@
     @apply text-left;
 }
 .micro-cms h1 {
-    @apply mt-5 block text-2xl;
+    @apply mt-5 mb-5 block text-2xl;
 }
 .micro-cms h2 {
-    @apply mt-5 font-bold md:text-2xl;
+    @apply mt-5 mb-5 font-bold md:text-2xl;
 }
 .micro-cms h3 {
-    @apply mt-5 text-blue-600 font-semibold;
+    @apply mt-5 mb-5 text-blue-600 font-semibold;
 }
 .micro-cms p {
     @apply text-lg ml-5 pb-3;
