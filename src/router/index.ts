@@ -74,6 +74,20 @@ export const routes = [
     redirect: "/content/doc/tmynent2by4",
     meta: { title: DEFAULT_TITLE+' | プライバシーポリシー' }
   },
+  // 公式discord
+  {
+    path: "/discord",
+    name: "Discord",
+    redirect: "https://discord.gg/pH2CYJQW7v",
+    meta: { title: DEFAULT_TITLE+' | 公式discord' }
+  },
+  // ブランディング・ガイドライン
+  {
+    path: "/assets",
+    name: "Assets",
+    redirect: "/content/doc/9fh_9uyaw9j",
+    meta: { title: DEFAULT_TITLE+' | ブランディング・ガイドライン' }
+  },
   // 404
   {
     path: "/:pathMatch(.*)*",

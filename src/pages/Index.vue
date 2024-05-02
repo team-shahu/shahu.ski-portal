@@ -71,12 +71,12 @@
             <svg class="h-5 w-5 text-gray-300 dark:text-gray-600" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M6 13L10 3" stroke="currentColor" stroke-linecap="round"/>
             </svg>
-            <a class="inline-flex items-center gap-x-1.5 text-sm text-rose-400 decoration-2 hover:underline font-medium" href="https://discord.gg/pH2CYJQW7v">
+            <router-link class="inline-flex items-center gap-x-1.5 text-sm text-rose-400 decoration-2 hover:underline font-medium" to="/discord">
                 Discordへ参加する
                 <svg class="flex-shrink-0 w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M5.27921 2L10.9257 7.64645C11.1209 7.84171 11.1209 8.15829 10.9257 8.35355L5.27921 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-            </a>
+            </router-link>
             </div>
         </div>
     </div>
