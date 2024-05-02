@@ -43,7 +43,7 @@
     </div>
     <!-- Post -->
     <div v-if="isLoaded">
-      <div class="mb-5 dark:border-gray-700">
+      <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto mb-5 dark:border-gray-700">
         <span v-for="category in content.category" :key="category.id">
             <router-link :to="'/category/'+category.id" class="mr=1">
                 <span class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-rose-100 text-rose-800 dark:bg-rose-800/30 dark:text-rose-500">
@@ -55,7 +55,7 @@
         <h1 class="mt-2 block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">{{ content.title }}</h1>
       </div>
 
-      <div class="micro-cms" v-html="content.content"></div>
+      <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto micro-cms" v-html="content.content"></div>
     </div>
   </div>
 </template>
