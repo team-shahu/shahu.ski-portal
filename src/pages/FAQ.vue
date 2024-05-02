@@ -26,7 +26,7 @@
         <div class="pb-10">
         <!-- Page Heading -->
         <div class="max-w-3xl mb-10">
-            <p class="mb-2 text-sm font-semibold text-blue-600">FAQ</p>
+            <p class="mb-2 text-sm font-semibold text-rose-400">FAQ</p>
             <h1 class="block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">よくありそうな質問</h1>
             <p class="mt-2 text-lg text-gray-800 dark:text-gray-400">なさそうでありそう、でも知っていると役に立つかもしれない質問集</p>
         <!-- End Page Heading -->
@@ -37,7 +37,7 @@
         <div v-if="!isLoaded" class="min-h-[15rem] flex flex-col">
             <div class="flex flex-auto flex-col justify-center items-center p-4 md:p-5">
                 <div class="flex justify-center">
-                <div class="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500" role="status" aria-label="loading">
+                <div class="animate-spin inline-block w-6 h-6 border-[3px] border-current border-t-transparent text-rose-400 rounded-full dark:text-rose-500" role="status" aria-label="loading">
                     <span class="sr-only">Loading...</span>
                 </div>
                 </div>
@@ -52,15 +52,15 @@
                     <div class="micro-cms" v-html="content.answer"></div>
                 </div>
 
-                <div class="mt-2 mb-3 ml-5 bg-blue-50 border border-blue-500 text-sm text-gray-500 rounded-lg p-5 dark:bg-blue-600/[.15]" v-if="content.description">
+                <div class="mt-2 mb-3 ml-5 bg-rose-50 border border-rose-500 text-sm text-gray-500 rounded-lg p-5 dark:bg-rose-600/[.15]" v-if="content.description">
                     <div class="flex">
-                        <svg class="flex-shrink-0 h-4 w-4 text-blue-600 mt-0.5 dark:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg class="flex-shrink-0 h-4 w-4 text-rose-400 mt-0.5 dark:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="10"></circle>
                         <path d="M12 16v-4"></path>
                         <path d="M12 8h.01"></path>
                         </svg>
                         <div class="ms-3">
-                            <h3 class="text-blue-600 font-semibold dark:font-medium dark:text-white">
+                            <h3 class="text-rose-400 font-semibold dark:font-medium dark:text-white">
                                 備考
                             </h3>
                             <p class="mt-2 text-gray-800 dark:text-slate-400">

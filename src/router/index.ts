@@ -27,7 +27,7 @@ export const routes = [
     path: "/donate",
     name: "Donate",
     component: Donate,
-    meta: { title: DEFAULT_TITLE+' | 寄付' }
+    meta: { title: DEFAULT_TITLE+' | 支援' }
   },
   {
     path: "/faq",
