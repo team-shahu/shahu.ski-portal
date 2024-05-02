@@ -53,6 +53,21 @@ export const routes = [
     component: Category,
     props: true,
   },
+  // 利用規約
+  {
+    path: "/terms",
+    name: "Terms",
+    redirect: "/content/doc/5qs4tuy9kh-p",
+    meta: { title: DEFAULT_TITLE+' | 利用規約' }
+  },
+  // プライバシーポリシー
+  {
+    path: "/privacy-policy",
+    name: "Privacy Policy",
+    redirect: "/content/doc/tmynent2by4",
+    meta: { title: DEFAULT_TITLE+' | プライバシーポリシー' }
+  },
+  // 404
   {
     path: "/:pathMatch(.*)*",
     name: "NotFound",
@@ -66,7 +81,7 @@ const router = createRouter({
   routes,
 });
 
-router.afterEach((to) => {
+router.afterEach((to: any) => {
   document.title = (to.meta.title as string) || DEFAULT_TITLE
 })
 
