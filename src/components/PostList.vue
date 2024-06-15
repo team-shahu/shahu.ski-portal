@@ -32,7 +32,7 @@
         queries.search_text = props.search_text;
     }
 
-    console.log(queries);
+    //console.log(queries);
 
     let isLoaded = ref(false);
     let contents: any = ref([]);
@@ -46,8 +46,8 @@
         .then((res) => {
             // 順次contentsへpush
             res.contents.forEach((content: any) => {
-                console.log(content);
-                console.log(content["eyecatch"]);
+                //console.log(content);
+                //console.log(content["eyecatch"]);
                 // content["eyecatch"]["url"]があるか
                 if(!content["eyecatch"]){
                     // ["eyecatch"]["url"]を追加
@@ -61,7 +61,7 @@
             maxPage.value = Math.ceil(res.totalCount / limit);
             isLoaded.value = true;
         })
-        .catch((err) => console.log(err));
+        .catch((err) => //console.log(err));
     });
 
     function base64urlEncode(source: string){

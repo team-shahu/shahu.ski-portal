@@ -11,9 +11,9 @@
         queries: { limit: 100, orders: '-createdAt' }
       })
       .then((res) => {
-        console.log(res);
+        //console.log(res);
         res.contents.forEach((content: any) => {
-          console.log(content);
+          //console.log(content);
           contents.value.push(content);
         });
         isLoaded.value = true;
