@@ -61,7 +61,7 @@
             maxPage.value = Math.ceil(res.totalCount / limit);
             isLoaded.value = true;
         })
-        .catch((err) => //console.log(err));
+        .catch((err) => console.log(err));
     });
 
     function base64urlEncode(source: string){
