@@ -55,7 +55,70 @@
         <h1 class="mt-2 block text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white">{{ content.title }}</h1>
       </div>
 
-      <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto micro-cms" v-html="content.content"></div>
+      <div class="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto micro-cms pb-20" v-html="content.content"></div>
     </div>
   </div>
 </template>
+
+<style scoped>
+  .micro-cms {
+      @apply dark:text-white;
+      overflow-x: auto;
+  }
+  .micro-cms table {
+      @apply w-full border-collapse border-2 border-gray-200 dark:border-gray-700;
+  }
+  .micro-cms img {
+      @apply dark:text-white w-full min-w-[30vw] bg-white dark:bg-gray-800 pl-0 pr-0 ml-0 mr-0 rounded-lg;
+  }
+  /* タブレット */
+  @media (min-width: 640px) {
+      .micro-cms img {
+          @apply max-w-[50vw];
+      }
+  }
+  /* PC */
+  @media (min-width: 1024px) {
+      .micro-cms img {
+          @apply max-w-[50vw];
+      }
+  }
+
+  /* 画像を左寄せ */
+  .micro-cms figure {
+      @apply text-left;
+  }
+  .micro-cms h1 {
+      @apply mt-5 mb-5 block text-2xl;
+  }
+  .micro-cms h2 {
+      @apply mt-5 mb-5 font-bold md:text-2xl;
+  }
+  .micro-cms h3 {
+      @apply mt-5 mb-5 text-rose-400 font-semibold;
+  }
+  .micro-cms p {
+      @apply text-lg ml-5 pb-3;
+  }
+  .micro-cms a {
+      @apply text-rose-400 hover:underline dark:text-rose-500 dark:hover:text-rose-400;
+  }
+  .micro-cms ul {
+      @apply list-disc list-inside;
+  }
+  .micro-cms ol {
+      @apply list-decimal list-inside;
+  }
+  .micro-cms blockquote {
+      @apply border-l-4 border-rose-500 text-gray-500 dark:border-rose-500 dark:text-rose-500 pl-2;
+  }
+  .micro-cms blockquote p {
+      @apply pl-3;
+  }
+  .micro-cms pre {
+      @apply p-4 bg-gray-100 dark:bg-gray-800;
+  }
+  .micro-cms li {
+      @apply mb-1;
+  }
+</style>
