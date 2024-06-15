@@ -12,7 +12,7 @@ import NotFound from "../pages/NotFound.vue";
 
 const DEFAULT_TITLE = 'しゃふすきーポータル'
 
-export const routes = [
+export const routes: any = [
   {
     path: "/",
     name: "Index",
@@ -78,7 +78,9 @@ export const routes = [
   {
     path: "/discord",
     name: "Discord",
-    redirect: "https://discord.gg/pH2CYJQW7v",
+    beforeEnter() {
+      window.location.assign("https://discord.gg/pH2CYJQW7v");
+    },
     meta: { title: DEFAULT_TITLE+' | 公式discord' }
   },
   // ブランディング・ガイドライン

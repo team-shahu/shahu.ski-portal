@@ -1,5 +1,21 @@
 <script lang="ts" setup>
     import ThemeSwitcher from './ThemeSwitcher.vue';
+    import { ref, watch } from 'vue';
+    import { useRoute } from 'vue-router';
+
+    // ページ遷移を監視
+    const router = useRoute();
+    let currentPage = ref(router.path);
+
+    watch(router, () => {
+      currentPage.value = router.path;
+      console.log(currentPage.value);
+      console.log(isCurrentPage('/'));
+    });
+
+    const isCurrentPage = (path: string) => {
+      return currentPage.value === path;
+    };
 </script>
 <template>
     <header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 dark:bg-gray-800">
@@ -21,17 +37,21 @@
       <div id="navbar-image-and-text-1" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
         <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
           <router-link to="/">
-            <a class="font-medium text-rose-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#" aria-current="page">はじめに</a>
+            <a v-if="isCurrentPage('/')" class="active-page" aria-current="page">はじめに</a>
+            <a v-else class="passive-page" aria-current="page">はじめに</a>
           </router-link>
           <router-link to="/donate">
-            <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">支援する</a>
+            <a v-if="isCurrentPage('/donate')" class="active-page" aria-current="page">支援する</a>
+            <a v-else class="passive-page" aria-current="page">支援する</a>
           </router-link>
           <router-link to="/faq">
-            <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">FAQ</a>
+            <a v-if="isCurrentPage('/faq')" class="active-page" aria-current="page">FAQ</a>
+            <a v-else class="passive-page" aria-current="page">FAQ</a>
           </router-link>
           
           <router-link to="/more-info">
-            <a class="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">もっと！</a>
+            <a v-if="isCurrentPage('/more-info')" class="active-page">もっと！</a>
+            <a v-else class="passive-page">もっと！</a>
           </router-link>
           <!-- Dark mode toggle -->
           <ThemeSwitcher />
@@ -40,3 +60,12 @@
     </nav>
   </header>
 </template>
+
+<style scoped>
+  .active-page {
+    @apply font-medium text-rose-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600;
+  }
+  .passive-page {
+    @apply font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600;
+  }
+</style>
