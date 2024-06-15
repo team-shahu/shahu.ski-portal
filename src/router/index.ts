@@ -12,7 +12,7 @@ import NotFound from "../pages/NotFound.vue";
 
 const DEFAULT_TITLE = 'しゃふすきーポータル'
 
-export const routes = [
+export const routes: any = [
   {
     path: "/",
     name: "Index",
