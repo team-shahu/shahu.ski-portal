@@ -141,6 +141,13 @@
                     下位レベルのすべての特典
                 </span>
                 </li>
+                
+                <li class="flex space-x-2">
+                <svg class="flex-shrink-0 mt-0.5 h-4 w-4 text-rose-400 dark:text-rose-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-gray-800 dark:text-gray-400">
+                    考え中です！ごめんなさい💦
+                </span>
+                </li>
             </ul>
             </div>
             <!-- End Card -->
@@ -159,6 +166,13 @@
                 <svg class="flex-shrink-0 mt-0.5 h-4 w-4 text-rose-400 dark:text-rose-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                 <span class="text-gray-800 dark:text-gray-400">
                     下位レベルのすべての特典
+                </span>
+                </li>
+                
+                <li class="flex space-x-2">
+                <svg class="flex-shrink-0 mt-0.5 h-4 w-4 text-rose-400 dark:text-rose-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-gray-800 dark:text-gray-400">
+                    考え中です！ごめんなさい💦
                 </span>
                 </li>
             </ul>
