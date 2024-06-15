@@ -60,7 +60,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
   .micro-cms {
       @apply dark:text-white;
       overflow-x: auto;
